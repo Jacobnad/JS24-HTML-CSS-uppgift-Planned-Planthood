@@ -4,409 +4,588 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 html {
-    background-color: rgb(213, 213, 213);
-    margin: auto;
-    padding: auto;
+    background-color: rgb(213, 213, 213); /* Bakgrundsfärg för hela sidan */
+    margin: auto; /* Centrera sidan */
+    padding: auto; /* Automatisk padding, även om detta inte påverkar mycket */
 }
 
 body {
-    max-width: 1000px;
-    margin:0 auto;
-    background-color: white;
-    box-sizing: border-box;
+    max-width: 1000px; /* Maxbredd för sidan */
+    width: 100%; /* Gör sidan responsiv */
+    margin: 0 auto; /* Centrera innehållet */
+    background-color: white; /* Vit bakgrund */
+    box-sizing: border-box; /* Räkna med padding och border i elementets storlek */
+    padding: auto; /* Automatisk padding, detta ger inte effekt, bör ändras vid behov */
 }
 
-body header {
-    display: flex;
-    justify-content: center;
+/* Header */
+
+.header {
+    display: flex; /* Använder flexbox för att arrangera innehållet */
+    justify-content: center; /* Centrera innehållet horisontellt */
 }
 
-header section.backgroundImageHeader {
-    background-image: url(assets/Rectangle\ 25.png);
-    background-position: center;
-    width: 501px;
-    height: 540px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.backgroundImageHeader {
+    background-image: url(assets/hand.jpeg);  
+    background-position: center; /* Centrera bakgrundsbilden */
+    background-size: cover; /* Täck hela området med bilden (kan läggas till för att förbättra utseendet) */
+    width: 501px;  
+    height: 540px;  
+    display: flex; /* Använder flexbox för att arrangera innehållet */
+    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center; /* Centrera innehållet vertikalt */
 }
 
-body header section img.heartLogo {
-    width: 190px;
-    height: 186px;
+.heartLogoHeder {
+    width: 190px;  
+    height: 186px;  
 }
 
-
-aside.brownBackground {
-    background-color: #9E6D52;
-    width: 500px;
-    height: 270px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.brownBackground {
+    background-color: #9E6D52;  
+    width: 500px;  
+    height: 270px;  
+    display: grid; /* Använder grid-layout för att arrangera innehållet */
+    grid-template-columns: repeat(3, 1fr); /* Delar upp i tre kolumner */
 }
 
-body header section img.seedlingIcon {
-    height: 196px;
-    width: 176px;
-    grid-area: 2 / 2;
+.seedlingIcon {
+    height: 196px; 
+    width: 176px;  
+    grid-area: 2 / 2; /* Positionerar ikonen i mitten av grid */
 }
 
-aside.greenBackground {
+.greenBackground {
     background-color: #0A846E;
-    width: 500px;
+    width: 500px;  
     height: 270px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid; /* Använder grid-layout för att arrangera innehållet */
+    grid-template-columns: repeat(3, 1fr); /* Delar upp i tre kolumner */
 }
 
-body header section img.spadeIcon {
+.spadeIcon {
     height: 206px;
     width: 155px;
-    grid-area: 2 / 2;
+    grid-area: 2 / 2; /* Positionerar ikonen i mitten av grid */
 }
 
 
-.menu li {
-    font-size: 20px;
-    color: #055647;
-}
+/* Nav */
 
-.meny {
-    display: flex;
-    justify-content: space-between;
-    border: 1px;
-}
 
-.menu ul {
-    padding: 0px;
-    list-style: none;
+.navList {
     display: flex;
     justify-content: space-evenly;
-    margin: 0;
-    margin-bottom: 3rem;
-    font-family: Maven Pro;
+    align-items: center; 
+    padding-bottom: 10px;
+    height: 50px;
+    list-style: none;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.NavListText {
+    font-size: 20px;
+    color: #055647;
+    text-decoration: none;
+    text-align: center;
 }
 
 .menu {
-    box-shadow: 0 4px 4px 0 rgba(3, 56, 47, 0.11);
+    box-shadow: 0 4px 4px 0 rgba(3, 56, 47, 0.11); /* Skugga för menyn */
 }
 
-article.first-part {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
+
+/* Main */
+.main {
+    max-width: 1000px; 
+    width: 100%; /* Gör sidan responsiv */
+    margin-top: 2rem;  
+    background-color: white;  
+    box-sizing: border-box;  
+    padding: 0;  
 }
 
-h1.main-name {
-    color: rgba(10, 132, 110, 255);
-    text-align: center;
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 48px;
-    font-weight: 500;
-    margin: 0;
-    margin-bottom: 60px;
+.main-name {
+    color: rgba(10, 132, 110, 255);  
+    text-align: center;  
+    font-family: 'Maven Pro', sans-serif;  
+    font-size: 48px; 
+    font-weight: 500;  
+    margin: 0;  
+    margin-bottom: 60px;  
 }
 
-section.seedBg {
-    background-color: #0A846E;
-    border-radius: 50%;
-    width: 377px;
-    height: 377px;
-    height: auto;
+.top {
+    max-width: 1000px; 
+    width: 100%; 
+    margin: 0 auto;  
 }
 
-img.seed {
-    padding: 100px;
-    width: 197px;
-    height: 194px;
+.first-part {
+    display: flex;  
+    flex-direction: row-reverse;  
+    justify-content: space-between; /* Placera elementen på varsin sida */
+    align-items: center;  
+    font-family: 'Open Sans', sans-serif;  
+    max-width: 911px;  
+    width: 100%; 
 }
 
-h2.season {
-    font-weight: 700;
-    font-size: 32px;
+.greenCircleDiv1 {
+    margin-left: 3rem; 
+    width: 40%;  
+    display: flex;  
+    justify-content: flex-end; /* Placera cirkeln längst till höger */
 }
 
-p.description {
-    font-weight: 400;
-    font-size: 16px;
+.seedBg {
+    background-color: #0A846E; 
+    border-radius: 50%;  
+    width: 377px;  
+    height: 377px; 
 }
 
-button.tips {
-    background-color: #0A846E;
-    color: white;
-    border-radius: 9px;
-    padding: 15px 35px;
-    border: none;
-    margin-left: 290px;
-    margin-top: 10px;
-    font-weight: 700;
-    font-size: 24px;
-    box-shadow: 3px 3px 3px #858585;
+.seed {
+    padding: 100px;  
+    width: 197px;  
+    height: 194px;  
 }
 
-button.tips:hover {
-    background-color: #dcd91b;
-    box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+.textContent1 {
+    margin-left: 3rem;  
+    width: 60%; 
+    display: flex;  
+    flex-direction: column;  
+    justify-content: flex-start;  
+    gap: 10px; /* Utrymme mellan elementen */
+    text-align: left;  
 }
 
-button.tips:active {
-    background-color: #096856;
-    transform: translateY(4px);
+.season {
+    margin-bottom: 10px;  
+    display: flex; 
+    justify-content: flex-start;  
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: 700;  
+    font-size: 32px;  
 }
 
+.description {
+    display: flex;  
+    justify-content: flex-start; 
+    text-align: start;  
+    font-weight: 400;  
+    font-size: 16px;  
+}
+
+.tips {
+    margin: 0;  
+    display: flex;  
+    justify-content: center; 
+    align-items: center;  
+    width: 179px; 
+    height: 63px;  
+    background-color: #0A846E;  
+    color: white;  
+    border-radius: 9px;  
+    text-align: center;  
+    border: none;  
+    font-weight: 700;  
+    font-size: 24px;  
+    box-shadow: 3px 3px 3px #858585;  
+    align-self: flex-end;  
+}
+
+.tips:hover {
+    background-color: #dcd91b; /* Bakgrundsfärg vid hover */
+    box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19); /* Skugga vid hover */
+}
+
+.tips:active {
+    background-color: #096856; /* Bakgrundsfärg vid klick */
+    transform: translateY(4px); /* Flytta ner knappen vid klick */
+}
 
 hr {
-    margin-top: 70px;
-    margin-bottom: 40px;
+    text-align: center;  
+    background-color: #055647;  
+    border: none;  
+    width: 333px;
+    height: 3px;  
+    margin-top: 3rem;  
+    margin-bottom: 1rem; 
 }
 
-section.middle {
+/* middle */
+.middle { 
+    max-width: 932px; 
+    width: 100%;  
+    margin: auto; 
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column;  
+    justify-content: center; 
+    align-items: center; 
 }
 
-section.middle-container {
+
+.middle-name {
+    margin: 2rem;  
+    text-align: center; 
+    font-family: 'Lato', sans-serif;  
+    font-weight: 600;  
+    font-size: 32px;  
+}
+
+.middle-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 1rem; 
+    justify-content: space-between; 
+    align-items: center; /* Centrera elementen vertikalt */
 }
 
 .pictures-wrapper {
-    position: relative;
-    max-height: 300px;
-    overflow: hidden;
-}
-
-
-img.pot {
-    width: 150px;
-    height: 205px;
-    position: absolute;
-    top: 19%;
-    right: 25%;
-}
-
-
-.middle img.supreme {
-    width: 100%;
-    height: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    background-position: center;
-}
-
-h2.middle-name {
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    font-size: 32px;
-}
-
-.item1 {
-    background-color: white;
-    padding: 10px;
-}
-
-.lato600 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-}
-
-.lato300 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-}
-
-.open700 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-}
-
-.first-row,
-.second-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    position: relative; /* Position för innehållet */
+    max-height: 293.54px;  
+    overflow: hidden; /* Dölja överflödig del av innehållet */
 }
 
 .card {
-    box-shadow: 6px 6px 6px #858585;
-    width: 300px;
-    margin-bottom: 25px;
+    box-shadow: 6px 6px 6px #858585; /* Skugga för korten */
+    width: 293.54px;  
+    margin-bottom: 25px;  
 }
 
-button.remove {
-    background-color: #B93857;
-    border: none;
-    border-radius: 9px;
-    padding: 7px 23px;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
+.supreme {
+    margin: auto;  
+    width: 293.54px;  
+    height: 296px;  
+    display: block;  
+    object-fit: cover; /* Fyller kortet utan att ändra proportioner */
+    background-position: center; 
 }
 
-button.remove:hover {
-    background-color: #e8476d;
-    box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+.pot {
+    width: 150px;  
+    height: 205px; 
+    position: absolute;  
+    top: 19%; 
+    right: 25%; 
 }
 
-button.remove:active {
-    background-color: #c10d2b;
-    transform: translateY(4px);
+.item1 {
+    margin: auto; 
+    padding: 10px;  
 }
 
-h4 {
-    font-weight: 300;
-    font-size: 16px;
+.first-row {
+    display: flex;  
+    flex-direction: row;  
+    justify-content: space-between;  
+    align-items: center;  
 }
 
-button.more {
-    background-color: rgba(10, 132, 110, 255);
-    color: white;
-    border-radius: 8px;
-    padding: 17px;
-    border: none;
-    margin-top: 25px;
-    ;
-    width: 157px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    box-shadow: 3px 3px 3px #858585;
-    margin-bottom: 20px;
+.second-row {
+    display: flex;  
+    flex-direction: row;  
+    justify-content: space-between;  
+    align-items: center;  
 }
 
-button.more:hover {
-    background-color: #dcd91b;
-    box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+.open700 {
+    font-family: 'open', sans-serif; 
+    font-weight: 700;  
+    font-size: 16px;  
 }
 
-button.more:active {
-    background-color: #096856;
-    transform: translateY(4px);
+.lato600 {
+    font-family: 'Lato', sans-serif;  
+    font-weight: 600;  
+    font-size: 24px; 
+}
+
+.lato300 {
+    font-family: 'Lato', sans-serif;  
+    font-weight: 300;  
+    font-size: 16px;  
+}
+
+.remove {
+    background-color: #B93857;  
+    border: none;  
+    border-radius: 9px; 
+    padding: 7px 23px;  
+    color: white;  
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: 700;  
+    font-size: 15px;  
+}
+
+.remove:hover {
+    background-color: #e8476d;  
+    box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19); /* Skugga vid hover */
+}
+
+.remove:active {
+    background-color: #c10d2b;  
+    transform: translateY(4px);  
 }
 
 .only-button {
-    text-align: center;
-    margin-bottom: 70px;
+    max-width: 1000px; 
+    width: 100%; /* Gör knappen responsiv */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;  
+    margin: 0 auto;  
 }
 
-body main section.wrapperAroundMain {
+.more {
+    margin: 3rem;  
+    background-color: rgba(10, 132, 110, 255); /* Bakgrundsfärg för knappen */
+    color: white;  
+    border-radius: 8px;  
+    padding: 17px;  
+    border: none;  
+    width: 157px;  
+    font-family: 'Inter', sans-serif;  
+    font-weight: 600; 
+    font-size: 24px; 
+    box-shadow: 3px 3px 3px #858585;
+}
+
+.more:hover {
+    background-color: #dcd91b; 
+    box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19); /* Skugga vid hover */
+}
+
+.more:active {
+    background-color: #096856; 
+    transform: translateY(4px); 
+}
+
+.wrapperAroundMain { 
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 70px;
+    justify-content: center; 
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
-
-body main section.mainSectionWithGreenCircle {
-
-    max-width: 467px;
-
+.mainSectionWithGreenCircle {
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: flex-start;  
 }
 
-body main aside.greenCircle {
+.greenCircle {
     background-color: #0A846E;
-    width: 377px;
-    height: 377px;
+    width: 377px;  
+    height: 377px;  
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 2rem;
 }
 
-body main section h2.odlingarText {
+.textContent2 {
+    margin-top: 4rem ;
+    max-width: 500px; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;  
+    gap: 20px;  
+    text-align: left;  
+}
+
+.odlingarText {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 32px;
+    margin: 0%;
 }
 
-body main section p.easterIsHereText {
+.easterIsHereText {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    margin-right: 1rem;
 }
 
-body main button.btnPlantedPlants {
+.btnPlantedPlants {
     background-color: #0A846E;
     border-radius: 8px;
     height: 63px;
     width: 281px;
     font-size: 24px;
     color: #fff;
-    border: 0;
+    border: none;  
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    box-shadow: 3px 3px 3px #858585;
+    box-shadow: 3px 3px 3px rgba(133, 133, 133, 0.5);  
+    cursor: pointer;
+    margin: 0; 
+    transition: background-color 0.3s, box-shadow 0.3s;  
 }
 
-button.btnPlantedPlants:hover {
+.btnPlantedPlants:hover {
     background-color: #dcd91b;
-    box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 16px rgba(217, 217, 217, 0.5), 0 17px 50px rgba(0, 0, 0, 0.19);
 }
 
-button.btnPlantedPlants:active {
+.btnPlantedPlants:active {
     background-color: #096856;
     transform: translateY(4px);
 }
 
-.helaMinFooter {
-    background-image: url(./assets/bakgrundBild.png);
-    max-width: 1000px;
-    height: 590px;
-    margin: 0 auto;
+.btnPlantedPlants:focus {
+    outline: none;  
+}
+
+
+
+/* MainLogin */
+.mainLogin {
+
+    background-image: url(assets/massagrönsaker.avif);  
+    background-position: center; /* Centrera bakgrundsbilden */
+    background-size: cover; /* Täck hela området med bilden (kan läggas till för att förbättra utseendet) */
+    width: 1000px;  
+    height: 100vh;  
+    display: flex; /* Använder flexbox för att arrangera innehållet */
+    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center; /* Centrera innehållet vertikalt */
+
+
+}
+
+.login-container {
     display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+} 
+
+.input-field {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}  
+
+.login-button {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;  
+    border-radius: 5px;  
+    background-color: #4CAF50;  
+    color: white;  
+    font-size: 16px;  
+    cursor: pointer; 
+}
+
+.login-button:hover {
+    background-color: #b7f217; /* تغيير لون الخلفية عند التمرير */
+}
+
+/* Footer*/
+
+.helaFooter {
+    margin: auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.helaMinFooter {
+    background-image: url(./assets/handsidan.avif);
+    background-size: cover;  
+    background-position: center;  
+    max-width: 1000px;
+    width: 100%;
+    height: 590px;
+    margin: auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: "svartBakgrund heartLogo"; 
+    align-items: center; 
     color: aliceblue;
+    position: relative; 
+}
+
+.heartLogoFooterContainer {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;  
+    max-width: 500px;
+    width: 100%;  
+    height: 100%;  
+    grid-row: 1;  
+}
+
+.heartLogoFooter {
+    height: 186px;
+    width: 190px;
+    margin: 0;  
+}
+
+.svartBakgrundContainer {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;  
+    width: 100%;  
+    height: 100%; 
+    grid-area: svartBakgrund; 
 }
 
 .svartBakgrund {
-    width: 500px;
-
+    margin: auto;
+    max-width: 500px;  
+    width: 100%;
+    height: 590px;  
     background-image: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79));
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "."
-        "vi-hors"
-        "kontakt";
-    padding: 1rem;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "vi-hors" "kontakt";  
 }
 
 .seeYa {
-    grid-area: vi-hors;
+    margin-top: 3rem;
+    grid-area: vi-hors;  
     display: flex;
-    margin: 0 auto;
-    align-items: center;
+    justify-content: center; 
+    align-items: center;  
     font-family: 'Maven Pro', sans-serif;
     font-weight: 500;
     font-size: 50px;
+    height: 100%;  
 }
 
-.seeYalater{
-    font-weight: 500;
+.kontaktDiv {
+    margin: 0% auto;
+    padding: 20px;
+    grid-area: kontakt;  
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;  
+    align-self: flex-end;  
+    max-width: 500px;
+    height: auto; 
 }
 
 .kontakt {
-    grid-area: kontakt;
+    padding: auto;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-self: flex-end;
+    align-self: center;
     max-width: 500px;
-    height: 33%;
-    /* margin-top: 300px; */
 }
 
 .leftside {
@@ -414,11 +593,12 @@ button.btnPlantedPlants:active {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    align-self: flex-end;
+    align-self: flex-start;
+    margin-right: 3rem;  
 }
 
 .leftside img {
-    margin-right: 0.2rem;
+    width: 31.21px;
 }
 
 .rightside {
@@ -427,34 +607,12 @@ button.btnPlantedPlants:active {
     justify-content: space-between;
     align-items: center;
     align-self: flex-end;
+    margin-left: 3rem;  
 }
 
 .rightside img {
-    margin-left: 0.2rem;
-}
-
-.heartLogo {
-    height: 186px;
-    width: 190px;
-    display: flex;
-    align-self: center;
-    margin: 0 auto;
-
-
-}
-
-.tillToppenAvSidan {
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1000px;
-    height: 64px;
-    margin: 0 auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    font-family: open sans;
-    font-size: 24px;
-    margin-bottom: 3rem;
+    width: 35px;
+    height: 35px;
 }
 
 .text-bottom {
@@ -463,153 +621,490 @@ button.btnPlantedPlants:active {
     font-size: 20px;
 }
 
-@media (max-width: 458px) {
+.tillToppenAvSidan {
+    color: black;
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    height: 64px;
+    bottom: 20px;  
+    right: 20px;   
+    text-align: center;  
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    font-family: open sans;
+    margin-bottom: 3rem;
+}
 
-    header {
-        display: flex;
-        flex-direction: column;  
-        align-items: center;  
+.tillToppenAvSidanP {
+    color: black;
+    font-size: 24px;
+}
+
+
+
+@media (max-width: 390px) {
+
+    body {
+        max-width: 390px;
+    }
+
+    /* header */
+
+    .header {
+        flex-direction: column;
     }
     
-    header section.backgroundImageHeader {
-        background-image: url(assets/Rectangle\ 25.png);
-        background-position: center;
-        width: 390px;
+    .backgroundImageHeader {
+        max-width: 390px;
+        width: 100%;
         height: 390px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
+    }
+
+    .backgroundImageHeader::before {
+        content: '';
+        position: absolute;
+        top: 10px; 
+        right: 10px; 
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        box-shadow: 0 8px 0 white, 0 16px 0 white;
     }
     
-    body header section img.heartLogo {
+    .heartLogoHeader {
         width: 189.88px;
         height: 186px;
     }
     
-    aside.brownBackground, aside.greenBackground {
-        width: 195px; /* نصف عرض الحاوية */
+    .brownBackground, aside.greenBackground {
+        width: 195px;
         height: 195px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    body header {
-        display: flex;
-        flex-direction: column; /* ترتيب العناصر بشكل عمودي */
-        align-items: center; /* توسيط العناصر أفقياً */
-    }
-    
     body header section {
         display: flex;
         justify-content: space-between;
-        width: 390px;
+        max-width: 390px;
+        width: 100%;
     }
     
-    body header section img.spadeIcon {
+    .spadeIcon {
         height: 130px;
         width: 97.9px;
     }
     
-    body header section img.seedlingIcon {
+    .seedlingIcon {
         height: 124px;
         width: 111.44px;
     }
+
+    /* Nav */
     
-    .meny {
-        display: none;
-    }
-    .menu li {
+    .menu {
         display: none;
     }
 
-    h1.main-name { 
-        color: rgba(10, 132, 110, 255);
-        text-align: center;
-        font-family: 'Maven Pro', sans-serif;
-        font-size: 20px;  /* حجم الخط في الهواتف */
-        font-weight: 500;
-        margin: 0;
-        margin-bottom: 20px;  /* فراغ أسفل العنوان */
+    /* Main */
+
+    .main {
+        max-width: 390px;
     }
     
-    article.first-part {  
-        display: flex;
-        flex-direction: column;   
-        align-items: center; /* Centrerar alla element horisontellt */
-        font-family: 'Open Sans', sans-serif;
+
+    .main-name {
+        font-size: 24px;  
     }
     
-    h2.season {
-        width: 355px;
-        height: 22px;
-        font-weight: 375;
-        font-size: 16px;  /* Textstorlek för mobil */
-        margin-bottom: 10px; /* Ger lite avstånd under h2 */
-        text-align: center;
+    .first-part {
+        max-width: 390px;
+        flex-direction: column;    
     }
-    
-    p.description {
-        width: 358px;
-        height: auto;
-        font-weight: 400;
-        font-size: 14px;
-        margin-bottom: 10px; /* Avstånd under beskrivningen */
-        text-align: center;
+
+    .textContent1 {
+        margin: 1px;
+        max-width: 390px;
+        width: 100%;
+        justify-content: center; 
+        gap: 0;
+        text-align: center; 
     }
-    
-    button.tips {
-        color: white;
-        border-radius: 9px;
-        padding: 10px; /* Ger lite padding inne i knappen */
-        border: none;
-        width: auto; /* Anpassar bredden till innehållet */
-        height: auto; /* Anpassar höjden till innehållet */
-        font-weight: 700;
-        font-size: 16px;
-        display: block; /* För att blockera layouten och centrera knappen */
-        margin: 10px auto; /* Centrerar knappen horisontellt */
-        box-shadow: 3px 3px 3px #858585;
-        text-align: center;
-        background-color: #0A846E;
-    }
-    
-    button.tips:hover {
-        background-color: #dcd91b;
-        box-shadow: 0 12px 16px 0 rgb(217, 217, 217), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    }
-    
-    button.tips:active {
-        background-color: #096856;
-        transform: translateY(4px);
-    }
-    
-    section.seedBg {
-        background-color: #0A846E;
-        border-radius: 50%;
-        width: 241px;  /* Bredd på cirkeln */
-        height: 241px; /* Höjd på cirkeln */
-        display: flex; 
+
+    .season {
+        font-size: 16px;    
         justify-content: center;
-        align-items: center;
-        margin-top: 20px; /* Avstånd ovanför cirkeln */
+        text-align: center; 
+    }
+    
+    .description {
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        text-align: center; 
+    }
+    
+    .tips {
+        width: 98.63px;
+        height: 34.71px;
+        font-size: 16px;
+        align-self: center;  
+    }
+
+    .greenCircleDiv1 {
+        margin: 0%;
+        max-width: 390px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .seedBg {
+        width: 241px; 
+        height: 241px;
+        margin-top: 20px;
         margin-bottom: 10px; 
     }
     
-    img.seed {
-        padding: 0;  
-        width: 70%;  
-        height: auto;  
+    .seed {
+        margin: auto;
+        padding: 60px;
+        width: 126px;
+        height: 124px;
     }
     
     hr {
-        margin-top: 40px; 
-        margin-bottom: 40px;  
-        width: 30%;
+        margin-top: 20px; 
+        width: 202px;
         height: 3px;
-        background-color: #055647;
-        border-radius: 3px;
-        border: none;
+    }
+
+    .middle { 
+        max-width: 390px;
+        justify-content: space-between;
+    }
+
+    .middle-name {
+        width: 390px;
+        height: 22px;
+        font-size: 17px;
+    }
+
+    .middle-container {
+        max-width: 390px;
+        width: 100%;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0%;
+    }
+
+    .pictures-wrapper {
+        width: 175px;
+        height: 160px;
+    }
+
+    .card {
+        box-shadow: 6px 6px 6px #bcbcbc;
+        width: 175px;
+        height: 220px;
+        margin: auto;
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .supreme {
+        width: 175px;
+        height: 160px;
+    }
+
+    .pot {
+        width: 64.3px;
+        height: 89.72px;    
+    }
+
+    .item1 {
+        margin: 0%;
+        padding: 5px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;  
+        justify-content: center;  
+        align-items: center;
+    }
+    
+    .first-row, .second-row {
+        max-width: 390px;
+        width: 100%;  
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto; 
+        
+    }
+    
+    .open700 {
+        margin: 0%;
+        font-size: 10px;
+    }
+    
+    .lato600 {
+        margin: 0%;
+        font-size: 14px;
+    }
+    
+    .lato300 {
+        margin: 0%;
+        font-size: 10px;
+    }
+    
+    .remove {
+        background-color: white;
+        margin: 0%;
+        padding: 0;
+        font-size: 0;
+        width: 13.15px;
+        height: 16px;
+        position: relative;
+    }
+    
+    .remove::before {
+        content: "\f2ed";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 16px;
+        color: #B93857;
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }    
+
+    .only-button {
+        margin-bottom: 70px;
+    }
+    
+    button.more {  
+        margin-bottom: 0%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        border-radius: 9px;
+        width: 115.67px;
+        height: 34.71px;
+        text-align: center;
+        font-size: 16px;
+
+    }
+
+    .wrapperAroundMain { 
+        max-width: 390px;
+        flex-direction: column;   
+        align-items: center;
+        margin-bottom: 4rem;
+    }
+    
+    .mainSectionWithGreenCircle {
+        padding: 10px;
+        margin: auto;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .greenCircle {
+        width: 240px; 
+        height: 240px;
+        margin: auto;
+        
+    }
+
+    .plantInPot {
+        width: 94.85px;
+        height: 131.95px;
+    }
+
+    .textContent2 {
+        margin-top: 2rem ;
+        justify-content: center;
+        align-items: center;  
+        text-align: center;  
+        max-width: 390px;
+    }
+    
+    .odlingarText {
+        height: 22px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .easterIsHereText {
+        margin: auto;
+        max-width: 390px;
+        width: 100%;
+        font-size: 14px;
+        text-align: center;  
+    }
+    
+    .btnPlantedPlants {
+        margin-top: 1rem;
+        border-radius: 9px;
+        height: 35px;
+        width: 179px;
+        font-size: 16px;
+    }
+    
+    .mainLogin {
+        max-width: 390px;
+        width: 100%; 
+        position: relative;
+    }
+
+    .mainLogin::before {
+        content: '';
+        position: absolute;
+        top: 10px; 
+        right: 10px; 
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        box-shadow: 0 8px 0 white, 0 16px 0 white; 
+    }
+    
+    .login-container {
+        width: 200px;
+    } 
+    
+    .input-field {
+        font-size: 14px;
+    }  
+    
+    .login-button {
+        font-size: 14px;  
+    }
+    
+    .helaMinFooter { 
+        width: 390px; 
+        height: 774px;
+    }
+
+    .heartLogoFooter {
+        height: 186px;
+        width: 190px;
+        margin: 0;  
+    }
+    
+    .heartLogoFooterContainer {
+        max-width: 390%;  
+    }
+    
+    .heartLogoFooter {
+        height: 186px; 
+        width: 189.88px; 
+        margin: auto; 
+    }
+    
+    .svartBakgrundContainer {
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-between;  
+        width: 390px;   
+        grid-row: 2;  
+    }
+
+    .seeYa {
+        margin-top: 3rem;
+        grid-area: vi-hors;  
+        display: flex;
+        justify-content: center; 
+        align-items: center;  
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 500;
+        font-size: 50px;
+        height: 100%;  
+    }
+
+    
+    .svartBakgrund {
+        height: 100%; 
+        grid-template-rows: auto 1fr; 
+        margin: 0;  
+    }
+    
+    .seeYa {
+        max-width: 390px;
+        width: 100%; 
+        font-size: 32px; 
+    }
+    
+    .seeYalater {
+        font-weight: 500;
+        
+    }
+    
+    .kontaktDiv {
+        margin-top: 30px;
+        justify-content: center;  
+        align-items: center; 
+        max-width: 390px;  
+        width: 100%;   
+        box-sizing: border-box;  
+    }
+    
+    .kontakt {
+        align-items: center; 
+        max-width: 390px;
+        width: 100%;  
+        box-sizing: border-box;  
+        height: auto;  
+    }
+
+
+    .leftside, .rightside {
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    .rightside {
+        margin-left: 1rem;
+    }
+
+    .leftside img {
+        width: 18.56px;
+        
+    }
+    
+    .rightside img {
+        width: 22px;
+        height: 20px;
+    }
+    
+
+    .text-bottom {
+        font-size: 12px;
+    }
+
+    .tillToppenAvSidan {
+        max-width: 390px;
+        width: 100%;
+        height: 64px;
+        font-size: 12px;
+        margin-bottom: 2rem;
+        text-decoration: none; 
+        line-height: 64px; 
+    }
+    
+    .tillToppenAvSidanP {
+        margin: 0;
+        font-size: 12px;
     }
 
 }
