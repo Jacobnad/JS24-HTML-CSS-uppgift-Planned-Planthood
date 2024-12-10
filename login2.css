@@ -1,0 +1,322 @@
+/* Importerar Google Fonts för att använda i designen */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* Globala inställningar för att nollställa standardvärden */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Navigationsmenyn */
+.navbar {
+	display: none; /* Döljer menyn som standard */
+}
+
+/* Wrapper för att centrera och organisera innehåll */
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Body-styling */
+body {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+/* Header-sektion */
+.hand {
+	position: relative;
+	padding: 0;
+}
+
+.header__logo {
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+}
+
+.header__image {
+	width: 100%;
+	height: 100%;
+}
+
+/* Sektion för planering */
+.planering {
+	margin-top: 20px;
+	margin-bottom: 25px;
+	h2 {
+		text-align: center;
+		font-weight: 400;
+		font-family: "Open Sans", sans-serif;
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+}
+
+/* Formulär för att lägga till ny plantering */
+.forms {
+	margin: 0 auto;
+	label {
+		margin-top: 5px;
+		font-size: 15px;
+		font-family: "Open Sans", sans-serif;
+		font-weight: 400;
+		display: block;
+	}
+	input {
+		box-shadow: 0px 4px 4px 0px #00000040;
+		border: none;
+		width: 100%;
+		min-height: 36px;
+	}
+}
+
+/* Knappen "Lägg Till" */
+.add {
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 120px;
+	height: 35px;
+	border-radius: 9px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	border: none;
+	background-color: #0a846e;
+	color: white;
+	margin-bottom: 50px;
+}
+
+/* Sektion för planterade växter */
+.plants {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 40%;
+}
+
+.plants__heading {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 600;
+	font-size: 1rem;
+	margin-bottom: 20px;
+}
+
+/* Gridlayout för växtkort */
+.plants__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	width: 85%;
+	gap: 5px;
+	justify-content: center;
+}
+
+.plants__card {
+	box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	min-width: 175px;
+	max-width: 225px;
+	margin-bottom: 25px;
+}
+
+.plants__remove {
+	display: none; /* Knapp för att ta bort är dold som standard */
+}
+
+/* Bildbehållare för växter */
+.plants__image-container {
+	height: 180px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.plants__image {
+	width: 100%;
+	height: auto;
+	min-height: 165px;
+	object-fit: cover;
+}
+
+/* Detaljer för växter */
+.plants__details {
+	margin: 10px;
+	font-family: "Lato", sans-serif;
+}
+
+.plants__details--top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.plants__name {
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+}
+
+.plants__date {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+	font-size: 0.625rem;
+}
+
+.plants__details--bottom {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	align-items: center;
+}
+
+.plants__owner {
+	font-weight: 300;
+	font-size: 12px;
+}
+
+.plants__icon {
+	width: 20px;
+	margin-bottom: 5px;
+}
+
+/* Gridlayout för flera sektioner */
+.sections {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+
+/* Styling för planteringssektionen */
+.planteringar {
+	display: flex;
+	flex-direction: column;
+	h2 {
+		text-align: center;
+		font-size: 23px;
+		font-family: "Open Sans", sans-serif;
+		font-weight: 500;
+		padding-bottom: 20px;
+	}
+}
+
+/* Sektion med brun bakgrund */
+.brown {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	background-color: #9e6d52;
+	gap: 15px;
+	justify-items: center;
+	border: 15px #9e6d52 solid;
+}
+
+.imgsize {
+	overflow: hidden;
+	width: 100%;
+	height: 250px;
+}
+
+/* Footer-styling */
+footer {
+	.back {
+		text-decoration: none;
+		color: black;
+		p {
+			font-family: "Open Sans", sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			text-align: center;
+			padding: 15px;
+			text-decoration: none;
+		}
+	}
+}
+
+/* Responsiv design för större skärmar */
+@media (min-width: 850px) {
+	body {
+		margin: 0 auto;
+		max-width: 1000px;
+		box-shadow: 0px 4px 4px 0px #00000040;
+	}
+
+	.plants__icon {
+		display: none;
+	}
+	.plants__remove {
+		border: none;
+		width: 95px;
+		height: 30px;
+		border-radius: 9px;
+		font-family: "Open Sans", sans-serif;
+		font-size: 16px;
+		background-color: #b93857;
+		color: white;
+		font-weight: 700;
+		display: inline;
+	}
+	.plants__owner {
+		font-size: 16px;
+	}
+
+	.forms {
+		display: flex;
+		flex-direction: row;
+		flex: 1;
+
+		.left {
+			margin-right: 15px;
+			width: 100%;
+		}
+		.right {
+			margin-left: 15px;
+			width: 100%;
+		}
+	}
+
+	.brown {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		height: 100%;
+		border: 25px #9e6d52 solid;
+	}
+
+	.add {
+		width: 192px;
+		height: 60px;
+	}
+
+	.hand {
+		height: 380px;
+		.header__logo {
+			width: 20%;
+			left: 40%;
+			top: 15%;
+		}
+	}
+
+	.navbar {
+		margin-top: 10px;
+		padding-bottom: 10px;
+		display: flex;
+		justify-content: space-around;
+		box-shadow: 0px 4px 4px 0px #03382f1c;
+	}
+	.navbar__link {
+		font-family: "Maven Pro", sans-serif;
+		text-decoration: none;
+		color: #055647;
+		font-size: 20px;
+	}
+}

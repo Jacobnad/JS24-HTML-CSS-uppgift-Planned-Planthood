@@ -1,0 +1,120 @@
+<!-- Ny sida 2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./login2.css" />
+	<title>Lägg Till</title>
+</head>
+<body>
+	<!-- Navigationsfält -->
+	<nav class="navbar">
+		<a class="navbar__link" href="./index.html">PLANER</a>
+		<a class="navbar__link" href="#">HISTORIK</a>
+		<a class="navbar__link" href="#">TIPS</a>
+		<a class="navbar__link" href="#">LOGGA IN</a>
+	</nav>
+
+	<!-- Sidhuvud -->
+	<header class="hand" id="back">
+		<img class="header__logo" src="./assets/Logo.svg" alt="Planned Planthood Logo" />
+		<img class="header__image" src="./assets/handsidan.avif" alt="Hand with flower" />
+	</header>
+
+	<!-- Huvudinnehåll -->
+	<main class="wrapper">
+		<!-- Formulär för att lägga till ny plantering -->
+		<section class="planering">
+			<h2>Lägg till ny plantering:</h2>
+			<form class="forms">
+				<!-- Fält för planta -->
+				<content class="left">
+					<label for="text">Planta:</label>
+					<input type="text" />
+				</content>
+				<!-- Fält för datum -->
+				<content class="right">
+					<label for="text">Datum:</label>
+					<input type="text" />
+				</content>
+			</form>
+		</section>
+
+		<!-- Knapp för att lägga till -->
+		<button class="add">LÄGG TILL</button>
+
+		<!-- Lista över planteringar -->
+		<section class="planteringar">
+			<h2>Dina planterade planteringar:</h2>
+			<section class="sections">
+				<article class="plants__card">
+					<!-- Bild för en planta -->
+					<figure class="plants__image-container">
+						<img class="plants__image" src="./assets/gurka.avif" alt="Gurka Plant" />
+					</figure>
+					<!-- Detaljer för planta -->
+					<content class="plants__details plants__details--top">
+						<h4 class="plants__name">Gurka</h4>
+						<p class="plants__date">15 april 2024</p>
+					</content>
+					<!-- Ägarinformation och ta bort-knapp -->
+					<figure class="plants__details plants__details--bottom">
+						<h6 class="plants__owner">Rico Coolio</h6>
+						<img class="plants__icon" src="./assets/gurka.avif" alt="Details Icon" />
+						<button class="plants__remove">TA BORT</button>
+					</figure>
+				</article>
+			</section>
+		</section>
+
+		<!-- Ytterligare planteringar -->
+		<section class="planteringar">
+			<h2>Ytterligare planterade planteringar:</h2>
+			<section class="sections">
+				<article class="plants__card">
+					<figure class="plants__image-container">
+						<img class="plants__image" src="./assets/gurka.avif" alt="Gurka Plant" />
+					</figure>
+					<content class="plants__details plants__details--top">
+						<h4 class="plants__name">Gurka</h4>
+						<p class="plants__date">15 april 2024</p>
+					</content>
+					<figure class="plants__details plants__details--bottom">
+						<h6 class="plants__owner">Rico Coolio</h6>
+						<img class="plants__icon" src="./assets/Logo.svg" alt="Details Icon" />
+						<button class="plants__remove">TA BORT</button>
+					</figure>
+				</article>
+				<article class="plants__card">
+					<content class="plants__image-container">
+						<img class="plants__image" src="./assets/gurka.avif" alt="Gurka Plant" />
+					</content>
+					<content class="plants__details plants__details--top">
+						<h4 class="plants__name">Gurka</h4>
+						<p class="plants__date">15 april 2024</p>
+					</content>
+					<figure class="plants__details plants__details--bottom">
+						<h6 class="plants__owner">Rico Coolio</h6>
+						<img class="plants__icon" src="./assets/plant.svg" alt="Details Icon" />
+						<button class="plants__remove">TA BORT</button>
+					</figure>
+				</article>
+			</section>
+		</section>
+	</main>
+
+	<!-- Sektion med olika bilder -->
+	<section class="brown">
+		<img class="imgsize" src="./assets/plockar.avif" alt="picking pepper" />
+		<img class="imgsize" src="./assets/vattenkanna.avif" alt="watering plants" />
+		<img class="imgsize" src="assets/massagrönsaker.avif" alt="vegetables on the ground" />
+		<img class="imgsize" src="./assets/tjejmedhatt.avif" alt="Woman in a hat" />
+	</section>
+
+	<!-- Sidfot -->
+	<footer>
+		<a class="back" href="#back"><p>Till toppen av sidan</p></a>
+	</footer>
+</body>
+</html>
